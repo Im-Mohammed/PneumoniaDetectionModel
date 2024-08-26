@@ -1,0 +1,38 @@
+.bg{
+   
+        background-image: url(../img/bg.jpg);
+        background-size: cover;
+        height: 100vh; /* Set height to viewport height for full-screen background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+.container {
+    max-width: 1000px; /* Increase the maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+.titlepage h2 {
+    color: #ffffff; /* Change the color of the h2 to dark gray (#333) */
+    margin-top: 30px; /* Move the h2 downwards by adding margin to the top */
+}
+.main_form .send_btn {
+    font-size: 15px;
+    transition: ease-in all 0.5s;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    color: #000000;
+    max-width: 180px;
+    width: 80%;
+    display: block;
+    font-weight: bold;
+    height: 77px;
+    border-radius: 15px;
+    line-height: 77px;
+}
+
+.main_form .send_btn:hover {
+    background-color: #e92f0b;
+    transition: ease-in all 0.5s;
+    color: #fff;
+}

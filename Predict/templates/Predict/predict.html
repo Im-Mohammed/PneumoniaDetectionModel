@@ -1,0 +1,27 @@
+<!-- templates/predict.html -->
+{% extends "../main/index.html" %}
+{% load static %}
+{% block title %} <title> Predict </title> {% endblock title %}
+{% block css %} <link rel="stylesheet" href="{% static "Predict/css/predict.css" %}"> {% endblock css %}
+{% block body %} <body class="main-layout inner_page"> {% endblock body %}
+{% include "./main/templates/main/header.html" %}
+{% block header %}
+<li><a href="{% url "indexfile" %}">Home</a></li>
+<li><a href="{% url "aboutpage" %}">About</a></li>
+<li><a class="active" href={% url "Test" %}>Predict</a></li>
+<li><a href="{% url "indexfile" %}" class="logo_midle">Pneumonia</a></li>
+<li><a href="{% url "Contact" %}">Contact </a></li>
+{% endblock header %}
+{% block main %}
+<div class="background-image">
+    <div class="form">
+        <h1>Prediction</h1>
+        <form id="myForm" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="custom-button">Submit</button>
+            <button type="reset" class="custom-button">Clear</button>
+        </form>
+    </div>
+</div>
+{% endblock main %}

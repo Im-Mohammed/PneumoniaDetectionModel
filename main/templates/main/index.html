@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      {% block title %}<title>Pneumonia</title> {% endblock title %}
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      
+      <link rel="stylesheet" href="{% static "main/css/bootstrap.css" %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static "main/css/style.css" %}">
+      <!-- Responsive-->
+      {% block css %} <link rel="stylesheet" href="{% static "main/css/responsive.css" %}"> {% endblock css %}
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="{% static "main/css/owl.carousel.min.css" %}"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+  {% block body %} <body class="main-layout">{% endblock body %}
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{% static "main/img/loading.gif" %}" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- top -->
+                      <!-- header -->
+                      <header class="header-area">
+                        <div class="container">
+                           <div class="row d_flex">
+                              <div class="col-sm-3 logo_sm">
+                                 <div class="logo">
+                                    <a href="{% url "indexfile" %}"></a>
+                                 </div>
+                              </div>
+                              <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+                                 <div class="navbar-area">
+                                    <nav class="site-navbar">
+                                       <ul>
+                                          {% block header %}
+                                          <li><a class="active" href="{% url "indexfile" %}">Home</a></li>
+                                          <li><a href="{% url "aboutpage" %}">About</a></li>
+                                          <li><a href="{% url "Test" %}">Predict</a></li>
+                                          <li><a href="{% url "indexfile" %}" class="logo_midle">Pneumonia</a></li>
+                                          <li><a href="{% url "Contact" %}">Contact </a></li>
+                                          {% endblock header %}
+                                       </ul>
+                                       <button class="nav-toggler">
+                                       <span></span>
+                                       </button>
+                                    </nav>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </header>
+                  <!-- end header -->
+   {% block  main %}
+      <div class="full_bg">
+      <!-- header inner -->
+         <div class="section">
+            <!-- carousel code -->
+            <div id="banner1" class="carousel slide slider_main">
+
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="carousel-caption cuplle">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="photog">
+                                    <h1>Pneumonia<br>Detection</h1>
+                                    <a class="read_more" href="https://my.clevelandclinic.org/health/diseases/4471-pneumonia" >Read More</a>
+                                    <a class="read_more" href="{% url "aboutpage" %}" >About Us</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+       </div>
+    </div>
+   {% endblock main %}
+      <!-- Javascript ile-->
+      <script src="{% static "main/js/jquery.min.js" %}"></script>
+      <script src="{% static "main/js/bootstrap.bundle.min.js" %}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script src="{% static "main/js/owl.carousel.min.js" %}"></script>
+      <script src="{% static "main/js/custom.js" %}"></script>
+   </body>
+</html>

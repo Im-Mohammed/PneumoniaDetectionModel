@@ -1,0 +1,33 @@
+<!-- templates/result.html -->
+{% extends "../main/index.html" %}
+{% load static %}
+{% block title %} <title> Prediction Result </title> {% endblock title %}
+{% block css %} <link rel="stylesheet" href="{% static "Predict/css/predict.css" %}"> {% endblock css %}
+{% block body %} <body class="main-layout inner_page"> {% endblock body %}
+{% include "./main/templates/main/header.html" %}
+{% block header %}
+<li><a href="{% url "indexfile" %}">Home</a></li>
+<li><a href="{% url "aboutpage" %}">About</a></li>
+<li><a href="{% url "Test" %}>Predict</a></li>
+<li><a href="{% url "indexfile" %}" class="logo_midle">Pneumonia</a></li>
+<li><a href="{% url "Contact" %}">Contact </a></li>
+{% endblock header %}
+{% block main %}
+<div class="background-image">
+    <div class="form">
+        <h2>Prediction Result:</h2>
+        {% if result == 0 %}
+            <div class="tenor-gif-embed" data-postid="5435525" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                <a href="https://tenor.com/view/stay-strong-fist-pump-kid-baby-motivation-gif-5435525">Stay Strong GIF</a>
+            </div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        {% else %}
+            <h2>You ARE Safe</h2>
+            <div class="tenor-gif-embed" data-postid="17213206" data-share-method="host" data-aspect-ratio="1.46789" data-width="100%">
+                <a href="https://tenor.com/view/tom-and-jerry-tom-the-cat-phew-relieved-sigh-gif-17213206">Tom And Jerry Tom The Cat GIF</a>
+            </div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        {% endif %}
+    </div>
+</div>
+{% endblock main %}

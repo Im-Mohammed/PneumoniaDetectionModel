@@ -1,0 +1,39 @@
+{% extends "../main/index.html" %}
+{% load static %}
+{% block title %} <title> About </title>  {% endblock title %} 
+{% block body %} <body class="main-layout inner_page"> {% endblock body %}
+{% include "./main/templates/main/header.html" %}
+{% block header %}
+<li><a href="{% url "indexfile" %}">Home</a></li>
+<li><a class="active" href="{% url "aboutpage" %}">About</a></li>
+<li><a href="{% url "Test" %}">Predict</a></li>
+<li><a href="{% url "indexfile" %}" class="logo_midle">Pneumonia</a></li>
+<li><a href="{% url "Contact" %}">Contact </a></li>
+{% endblock header %}
+{% block main %}  
+<div class="about">
+    <div class="container_width">
+       <div class="row d_flex">
+              <div class="col-md-7">
+             <div class="titlepage text_align_left">
+                <h2>About Pneumonia Detection </h2>
+                <p>Pneumonia which is a dangerous disease that may occur in one or both lungs usually caused by viruses, fungi or bacteria. We will detect this lung disease based on the x-rays we have. Chest X-rays dataset is taken from Kaggle which contain various x-rays images differentiated by two categories “Pneumonia” and “Normal”. We will be creating a deep learning model which will actually tell us whether the person is having pneumonia disease or not having pneumonia.
+               <br>
+                Want to test then you can download the files from below. 
+               </p>
+                <a class="read_more" href="{% url 'download_images' %}">
+                  <button class="read_more" >Download</button>
+                </a>
+             </div>
+          </div>
+          <div class="col-md-5">
+             <div class="about_img text_align_center">
+                <figure><img src="{% static "about/img/about.png" %}" alt="#"/></figure>
+             </div>
+          </div>
+         
+       </div>
+    </div>
+ </div>
+ <!-- end about -->
+{% endblock main %}
