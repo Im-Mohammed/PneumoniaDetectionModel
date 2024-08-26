@@ -90,9 +90,7 @@ This will start the training process using the VGG16 model with transfer learnin
 
 # Results
 
-The model achieved a training accuracy of **96%** in detecting pneumonia from chest X-ray images. The following chart illustrates the training and validation accuracy over epochs:
-
-![Accuracy Plot](path/to/accuracy_plot.png)
+The model achieved a training accuracy of **96%** in detecting pneumonia from chest X-ray images. 
 
 # Usage
 
