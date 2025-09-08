@@ -1,5 +1,5 @@
 # 🩺 Pneumonia Detection from Chest X-rays  
-**AI-Powered Diagnostic Support Using Transfer Learning**
+**Deep Learning for Early Diagnosis**
 
 ---
 
