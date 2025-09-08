@@ -9,7 +9,7 @@ Pneumonia remains a leading cause of morbidity worldwide, and timely diagnosis i
 
 ✅ Built for medical imaging workflows  
 ✅ Streamlined training with VGG16 architecture  
-✅ Achieves 82% training accuracy with minimal tuning
+✅ Achieves 82% training accuracy 
 
 ---
 
