@@ -138,6 +138,3 @@ For questions, feedback, or collaboration opportunities:
 
 This project is licensed under the **MIT License**.  
 You’re free to use, modify, and distribute it with attribution.
-
-
-Would you like me to help you add GitHub badges, a thumbnail preview for the demo, or a short LinkedIn post to showcase this project with impact? I can also help you write a one-liner for your portfolio that makes this project instantly clear to recruiters.
