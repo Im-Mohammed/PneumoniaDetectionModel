@@ -1,5 +1,5 @@
 # 🩺 Pneumonia Detection from Chest X-rays  
-**AI-Powered Diagnostic Support Using Transfer Learning**
+**Deep Learning For Early Diagnosis**
 
 Pneumonia is a serious respiratory condition that demands timely and accurate diagnosis. This project introduces an intelligent system that analyzes chest X-ray images to detect signs of pneumonia using deep learning. By fine-tuning a pre-trained VGG16 model, the solution offers fast, reliable classification of X-rays as either **Normal** or **Pneumonia**, supporting healthcare professionals in early intervention.
 
@@ -20,14 +20,32 @@ All images are resized to 224×224 pixels to match the input requirements of the
 
 ## 🧠 Model Highlights
 
-This project uses transfer learning to adapt the VGG16 convolutional neural network for binary classification:
+This Pneumonia Detection model is built using transfer learning with VGG16 and fine-tuned for binary classification of chest X-ray images. Key architectural and training features include:
 
-- **Base Model**: VGG16 (pre-trained on ImageNet)
-- **Input Size**: 224×224 pixels
-- **Output Layer**: Dense layer with 2 units + softmax
-- **Epochs**: 5 (configurable)
+- **Architecture**:  
+  - Base: VGG16 (pre-trained on ImageNet)  
+  - Top Layers: Flatten + Dense(2) with softmax activation  
+  - Output: Two classes — **Normal** and **Pneumonia**
 
-The convolutional layers of VGG16 are frozen to preserve learned features, while the top layers are retrained on the pneumonia dataset.
+- **Input Configuration**:  
+  - Image size: 224×224 pixels  
+  - Color channels: RGB (3-channel input)
+
+- **Training Strategy**:  
+  - Frozen convolutional layers to retain learned features  
+  - Augmented training data using shear, zoom, and horizontal flip  
+  - Rescaled pixel values for both training and test sets  
+  - Optimizer: Adam  
+  - Loss Function: Categorical Crossentropy  
+  - Epochs: 5 (configurable for deeper training)
+
+- **Batch Processing**:  
+  - Batch size: 32  
+  - Directory-based image loading with categorical labels
+
+- **Model Output**:  
+  - Trained model saved as `chest_xray.h5`  
+  - Ready for deployment or integration into prediction pipelines
 
 ---
 
@@ -79,11 +97,10 @@ Experience the model in action:
 
 [▶️ Click to Watch Demo](https://github-production-user-asset-6210df.s3.amazonaws.com/128249314/361316701-409efd31-e61a-4b6e-abd4-6e68d23e8e05.mp4)
 
-> _Note: This video is hosted on GitHub's asset server and may expire. For long-term access, consider uploading to YouTube or Vimeo._
 
 ---
 
-## 🩻 Predicting New Images
+##  Predicting New Images
 
 Once trained, you can run predictions on new chest X-ray images:
 
@@ -121,3 +138,6 @@ For questions, feedback, or collaboration opportunities:
 
 This project is licensed under the **MIT License**.  
 You’re free to use, modify, and distribute it with attribution.
+
+
+Would you like me to help you add GitHub badges, a thumbnail preview for the demo, or a short LinkedIn post to showcase this project with impact? I can also help you write a one-liner for your portfolio that makes this project instantly clear to recruiters.
